@@ -16,6 +16,10 @@ Global options for Makefile
 * or GXX= g++ to use
 * DEBUG= compilation in debug mode
 
+toolchain for android
+   1) Create sysroot directory by make-standalone-toolchain.sh
+   2) make SYSROOT=PATH CC=PATH CXX=PATH CXXFLAGS="-DANDROID -Ilibleaktracer/include"
+
 make or make all
    Compiles dynamic and static library which exposes all LearTracer functionality
 

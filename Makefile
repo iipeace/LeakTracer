@@ -57,8 +57,8 @@ CPPFLAGS += -I$(LIBLEAKTRACERPATH)/include -I$(LIBLEAKTRACERPATH)/src
 CPPFLAGS += -DUSE_BACKTRACE
 DYNLIB_FLAGS=-fpic -DSHARED -Wl,-z,defs
 # timestamp support
-LD_FLAGS=-lrt
-LD_FLAGS+=  -ldl -lpthread
+#LD_FLAGS=-lrt
+#LD_FLAGS+=  -ldl -lpthread
 
 CXXFLAGS += $(EXTRA_CXXFLAGS)
 
