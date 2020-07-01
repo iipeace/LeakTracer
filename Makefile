@@ -43,7 +43,7 @@ ifeq ($(NOOPT),1)
 CXXFLAGS += -O1
 CXXFLAGS += -g3 -DLOGGER
 else
-CXXFLAGS += -O3
+CXXFLAGS += -O2
 endif
 
 # some architecture generate a lot more instuction than on x86 (mips, arm...), this make the functions not inlined
