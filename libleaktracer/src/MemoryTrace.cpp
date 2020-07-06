@@ -113,6 +113,7 @@ MemoryTrace::init_no_alloc_allowed()
 {
 	libc_alloc_func_t *curfunc;
 	unsigned i;
+	void *ret;
 
  	for (i=0; i<(sizeof(libc_alloc_funcs)/sizeof(libc_alloc_funcs[0])); ++i) {
 		curfunc = &libc_alloc_funcs[i];
@@ -121,9 +122,13 @@ MemoryTrace::init_no_alloc_allowed()
 				*curfunc->localredirect = curfunc->libcsymbol;
 			} else {
 #ifndef __ANDROID__
-				*curfunc->localredirect = dlsym(RTLD_DEFAULT, curfunc->symbname);
-#else
 				*curfunc->localredirect = dlsym(RTLD_NEXT, curfunc->symbname);
+#else
+                ret = dlsym(RTLD_NEXT, curfunc->symbname);
+                if (ret)
+                    *curfunc->localredirect = ret;
+                else
+                    *curfunc->localredirect = dlsym(RTLD_DEFAULT, curfunc->symbname);
 #endif
 			}
 		}
