@@ -48,7 +48,7 @@
 /////////////////////////////////////////////////////////////
 
 #ifndef ALLOCATION_STACK_DEPTH
-#	define ALLOCATION_STACK_DEPTH 20
+#	define ALLOCATION_STACK_DEPTH 40
 #endif
 
 #ifndef PRINTED_DATA_BUFFER_SIZE
@@ -334,7 +334,37 @@ inline void MemoryTrace::storeAllocationStack(void* arr[ALLOCATION_STACK_DEPTH])
 	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(6)) != NULL) ? __builtin_return_address(6) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
 	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(7)) != NULL) ? __builtin_return_address(7) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
 	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(8)) != NULL) ? __builtin_return_address(8) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
-	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(9)) != NULL) ? __builtin_return_address(9) : NULL;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(9)) != NULL) ? __builtin_return_address(9) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(10)) != NULL) ? __builtin_return_address(10) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(11)) != NULL) ? __builtin_return_address(11) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(12)) != NULL) ? __builtin_return_address(12) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(13)) != NULL) ? __builtin_return_address(13) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(14)) != NULL) ? __builtin_return_address(14) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(15)) != NULL) ? __builtin_return_address(15) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(16)) != NULL) ? __builtin_return_address(16) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(17)) != NULL) ? __builtin_return_address(17) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(18)) != NULL) ? __builtin_return_address(18) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(19)) != NULL) ? __builtin_return_address(19) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(20)) != NULL) ? __builtin_return_address(20) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(21)) != NULL) ? __builtin_return_address(21) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(22)) != NULL) ? __builtin_return_address(22) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(23)) != NULL) ? __builtin_return_address(23) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(24)) != NULL) ? __builtin_return_address(24) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(25)) != NULL) ? __builtin_return_address(25) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(26)) != NULL) ? __builtin_return_address(26) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(27)) != NULL) ? __builtin_return_address(27) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(28)) != NULL) ? __builtin_return_address(28) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(29)) != NULL) ? __builtin_return_address(29) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(30)) != NULL) ? __builtin_return_address(30) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(31)) != NULL) ? __builtin_return_address(31) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(32)) != NULL) ? __builtin_return_address(32) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(33)) != NULL) ? __builtin_return_address(33) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(34)) != NULL) ? __builtin_return_address(34) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(35)) != NULL) ? __builtin_return_address(35) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(36)) != NULL) ? __builtin_return_address(36) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(37)) != NULL) ? __builtin_return_address(37) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(38)) != NULL) ? __builtin_return_address(38) : NULL; if (iIndex == ALLOCATION_STACK_DEPTH) return;
+	arr[iIndex++] = (pFrame != NULL && (pFrame = __builtin_frame_address(39)) != NULL) ? __builtin_return_address(39) : NULL;
 #endif
 	// fill remaining spaces
 	for (; iIndex < ALLOCATION_STACK_DEPTH; iIndex++)

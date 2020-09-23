@@ -13,14 +13,6 @@
 TEST_LINK_STATIC = 0
 TEST_HARD_LINK = 1
 
-ifneq ($(CROSS_COMPILE),)
-CXX=$(CROSS_COMPILE)g++
-else
-ifeq ($(CXX),)
-CXX ?= g++
-endif
-LIBDIR := $(shell echo -n lib; (ldd /usr/bin/ls |grep -q lib64) && echo -n 64)
-endif
 SRCDIR ?= $(CURDIR)
 OBJDIR ?= $(CURDIR)/build/$(shell $(CXX) -dumpmachine)/$(shell $(CXX) -dumpversion)
 ifeq ($(PREFIX),)
@@ -58,7 +50,7 @@ CPPFLAGS += -DUSE_BACKTRACE
 DYNLIB_FLAGS=-fpic -DSHARED -Wl,-z,defs
 # timestamp support
 LD_FLAGS=-lrt
-LD_FLAGS+=  -ldl -lpthread
+LD_FLAGS+= -ldl -lpthread
 
 CXXFLAGS += $(EXTRA_CXXFLAGS)
 
